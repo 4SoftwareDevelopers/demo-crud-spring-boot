@@ -46,7 +46,7 @@ public class PersonaRestController {
 		if (persona != null) {
 			personaServiceAPI.delete(id);
 		}else {
-			return new ResponseEntity<Persona>(persona, HttpStatus.INTERNAL_SERVER_ERROR);
+			return new ResponseEntity<Persona>(HttpStatus.NO_CONTENT);
 		}
 		
 		return new ResponseEntity<Persona>(persona, HttpStatus.OK);
