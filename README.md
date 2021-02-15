@@ -1,5 +1,5 @@
 # demo-crud-spring-boot
-CRUD con Spring Boot utilizando Thymeleaf y Bootstrap
+CRUD con Spring Boot utilizando Spring security, Thymeleaf y Bootstrap
 
 <br>
 <b>Vídeo CRUD patron MVC:</b><br>
@@ -8,6 +8,10 @@ CRUD con Spring Boot utilizando Thymeleaf y Bootstrap
 
 <b>Vídeo CRUD API Rest:</b><br>
 <b>https://youtu.be/xNZEgVJ_4Q0</b><br>
+
+
+<b>Vídeo Spring Security:</b><br>
+<b>https://youtu.be/X2tKU2dNQow</b><br>
 
 <br>
 <b><a href="https://goo.gl/v2Oej4" target="_blank">#VamosPorLos10k</a><b>
