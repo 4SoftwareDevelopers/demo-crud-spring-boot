@@ -45,7 +45,7 @@ public class PersonaRestController {
 		Persona persona = personaServiceAPI.get(id);
 		if (persona != null) {
 			personaServiceAPI.delete(id);
-		}else {
+		} else {
 			return new ResponseEntity<Persona>(HttpStatus.NO_CONTENT);
 		}
 		

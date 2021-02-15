@@ -14,6 +14,11 @@
 		<div>
 			<a href="/save/0" class="btn btn-primary">Agregar</a>
 		</div>
+		<div style="margin-top:20px;">
+			<form th:action="@{/logout}" method="post">
+				<input type="submit" class="btn btn-success" value="Cerrar sesión">
+			</form>
+		</div>
 		<h2 th:if="${list.isEmpty()}">No hay personas</h2>
 		<div th:if="${!list.isEmpty()}">
 			<h2>Personas</h2>
