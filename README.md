@@ -4,6 +4,7 @@ CRUD con Spring Boot utilizando Spring security, Thymeleaf y Bootstrap
 <br>
 <b>Vídeo CRUD patron MVC:</b><br>
 <b>https://youtu.be/ba8arWqyTAw</b><br>
+<br>
 
 
 <b>Vídeo CRUD API Rest:</b><br>
