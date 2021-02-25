@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Iniciar sesión</title>
+
+<!-- Bootstrap CSS -->
+<link href="../static/css/bootstrap.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.css}">
+</head>
+<body>
+	<div class="container">
+		<br>
+		<div>
+			<h1>Ingrese sus datos de sesión para entrar al sistema</h1>
+		</div>
+		<div class="alert alert-danger" th:if="${param.error}">Nombre de usuario o contraseña
+			incorrectos.</div>
+		<div class="alert alert-success" th:if="${param.logout}">Sesión cerrada correctamente.</div>
+		<form class="form-horizontal" th:action="@{/login}" method="post">
+			<div class="form-group">
+				<input type="text" placeholder="Usuario" class="form-control"
+					name="username" />
+			</div>
+			<div class="form-group">
+				<input type="password" placeholder="Contraseña" class="form-control" name="password" />
+			</div>
+			<div class="form-group">
+				<input type="submit" class="btn btn-primary" value="Entrar" />
+			</div>
+		</form>
+	</div>
+</body>
+</html>

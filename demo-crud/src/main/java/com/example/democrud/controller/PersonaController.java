@@ -12,6 +12,7 @@ import com.example.democrud.model.Persona;
 import com.example.democrud.service.api.PersonaServiceAPI;
 
 @Controller
+@RequestMapping("/home")
 public class PersonaController {
 	
 	@Autowired
