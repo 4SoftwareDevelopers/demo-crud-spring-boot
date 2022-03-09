@@ -14,40 +14,43 @@ import com.example.democrud.service.api.PersonaServiceAPI;
 @Controller
 @RequestMapping("/home")
 public class PersonaController {
-	
+
 	@Autowired
 	private PersonaServiceAPI personaServiceAPI;
-	
+
 	@RequestMapping("/")
 	public String index(Model model) {
 		model.addAttribute("list", personaServiceAPI.getAll());
 		return "index";
 	}
-	
-	
+
+	@GetMapping("/create")
+	public String create(Model model) {
+		model.addAttribute("persona", new Persona());
+		return "save";
+	}
+
 	@GetMapping("/save/{id}")
-	public String showSave(@PathVariable("id") Long id , Model model) {
-		if(id != null && id != 0) {
+	public String showSave(@PathVariable("id") Long id, Model model) {
+		if (id != null && id != 0) {
 			model.addAttribute("persona", personaServiceAPI.get(id));
-		}else {
+		} else {
 			model.addAttribute("persona", new Persona());
 		}
 		return "save";
 	}
-	
+
 	@PostMapping("/save")
 	public String save(Persona persona, Model model) {
 		personaServiceAPI.save(persona);
-		return "redirect:/";
+		return "redirect:/home/";
 	}
-	
+
 	@GetMapping("/delete/{id}")
 	public String delete(@PathVariable Long id, Model model) {
 		personaServiceAPI.delete(id);
-		
-		return "redirect:/";
+
+		return "redirect:/home/";
 	}
-	
-	
 
 }

@@ -5,21 +5,28 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotBlank;
+
+import com.sun.istack.internal.NotNull;
 
 @Entity
 public class Persona {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@NotNull
 	private Long id;
 	
 	@Column
+	@NotBlank
 	private String nombre;
 	
 	@Column
+	@NotBlank
 	private String apellido;
 	
 	@Column
+	@NotBlank
 	private String direccion;
 	
 	@Column

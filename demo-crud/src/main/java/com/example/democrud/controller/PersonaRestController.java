@@ -2,6 +2,8 @@ package com.example.democrud.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -35,7 +37,7 @@ public class PersonaRestController {
 	}
 
 	@PostMapping(value = "/save")
-	public ResponseEntity<Persona> save(@RequestBody Persona persona) {
+	public ResponseEntity<Persona> save(@RequestBody @Valid Persona persona) {
 		Persona obj = personaServiceAPI.save(persona);
 		return new ResponseEntity<Persona>(obj, HttpStatus.OK);
 	}

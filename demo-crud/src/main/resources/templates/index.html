@@ -12,15 +12,15 @@
 	<div class="container">
 		<br>
 		<div>
-			<a href="/save/0" class="btn btn-primary">Agregar</a>
+			<a href="/home/create" class="btn btn-primary">Agregar</a>
 		</div>
 		<div style="margin-top:20px;">
 			<form th:action="@{/logout}" method="post">
 				<input type="submit" class="btn btn-success" value="Cerrar sesión">
 			</form>
 		</div>
-		<h2 th:if="${list.isEmpty()}">No hay personas</h2>
-		<div th:if="${!list.isEmpty()}">
+		<h2 th:if="${list == null} OR ${list.isEmpty()}">No hay personas</h2>
+		<div th:if=" ${list != null} AND ${!list.isEmpty()}">
 			<h2>Personas</h2>
 			<table class="table">
 				<thead>
@@ -39,8 +39,8 @@
 						<td th:text="${persona.apellido}">
 						<td th:text="${persona.direccion}">
 						<td th:text="${persona.telefono}">
-						<td><a class="btn btn-info" th:href="@{/save/{id}(id=${persona.id})}">Editar</a></td>
-						<td><a class="btn btn-danger" th:href="@{/delete/{id}(id=${persona.id})}">Eliminar</a></td>
+						<td><a class="btn btn-info" th:href="@{/home/save/{id}(id=${persona.id})}">Editar</a></td>
+						<td><a class="btn btn-danger" th:href="@{/home/delete/{id}(id=${persona.id})}">Eliminar</a></td>
 					</tr>
 				</tbody>
 			</table>
