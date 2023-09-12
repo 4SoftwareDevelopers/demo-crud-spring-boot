@@ -14,6 +14,10 @@ CRUD con Spring Boot utilizando Spring security, Thymeleaf y Bootstrap
 <b>Vídeo Spring Security:</b><br>
 <b>https://youtu.be/X2tKU2dNQow</b><br>
 
+
+<b>Script SQL de tabla:</b><br>
+<b>https://gist.github.com/4SoftwareDevelopers/c964b0f45903dab860609df24100e03c</b><br>
+
 <br>
 <b><a href="https://goo.gl/v2Oej4" target="_blank">#VamosPorLos100k</a><b>
 <br>
